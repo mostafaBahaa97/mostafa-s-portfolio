@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mostafabahaa.dev"),
+  metadataBase: new URL("https://mostafa-s-portfolio.vercel.app/"),
   title: {
     default: "Mostafa Bahaa | Full Stack Developer",
     template: "%s | Mostafa Bahaa"
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mostafabahaa.dev",
+    url: "https://mostafa-s-portfolio.vercel.app/",
     title: "Mostafa Bahaa | Full Stack Developer",
     description: "Full Stack Developer specializing in React, Next.js, Python, Django & Flask.",
     siteName: "Mostafa Bahaa Portfolio",
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://mostafabahaa.dev" />
+        <link rel="canonical" href="https://mostafa-s-portfolio.vercel.app/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Person",
               "name": "Mostafa Bahaa",
               "jobTitle": "Full Stack Developer",
-              "url": "https://mostafabahaa.dev",
+              "url": "https://mostafa-s-portfolio.vercel.app/",
               "sameAs": [
                 "https://github.com/mostafaBahaa97",
                 "https://linkedin.com/in/mostafabahaaeldin-dev/"
