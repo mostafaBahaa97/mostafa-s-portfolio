@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [],
+    domains: ['192.168.1.100', 'localhost', 'cv-kappa-khaki-64.vercel.app'],
   },
   async headers() {
     return [

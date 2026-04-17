@@ -168,6 +168,7 @@ export default function HomeClient() {
                   border: "1px solid rgba(108,99,255,0.3)",
                   borderRadius: 12, padding: "12px 16px",
                   display: "flex", alignItems: "center", gap: 12,
+                  marginBottom: 12,
                 }}>
                   <div style={{ fontSize: 22, flexShrink: 0 }}>🎓</div>
                   <div>
@@ -175,6 +176,39 @@ export default function HomeClient() {
                     <p style={{ fontSize: 12, color: "var(--text-muted)" }}>Full Stack React & Python Track</p>
                   </div>
                 </div>
+
+                {/* CV Badge */}
+                <a
+                  href="https://cv-kappa-khaki-64.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(67,233,123,0.15), rgba(108,99,255,0.1))",
+                    border: "1px solid rgba(67,233,123,0.3)",
+                    borderRadius: 12,
+                    padding: "12px 16px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                    cursor: "pointer",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(67,233,123,0.6)";
+                    (e.currentTarget as HTMLElement).style.background = "linear-gradient(135deg, rgba(67,233,123,0.25), rgba(108,99,255,0.15))";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(67,233,123,0.3)";
+                    (e.currentTarget as HTMLElement).style.background = "linear-gradient(135deg, rgba(67,233,123,0.15), rgba(108,99,255,0.1))";
+                  }}
+                >
+                  <div style={{ fontSize: 22, flexShrink: 0 }}>📄</div>
+                  <div>
+                    <p style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: 13, color: "var(--text)" }}>View My CV</p>
+                    <p style={{ fontSize: 12, color: "var(--text-muted)" }}>Download & view profile</p>
+                  </div>
+                </a>
               </div>
 
               {/* Floating badge */}
