@@ -3,7 +3,7 @@ import ProjectsClient from "@/components/ProjectsClient";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Explore Hazem Elrayan's full stack projects — from Next.js + Django web apps to React-based social platforms. Real-world projects built and deployed.",
+  description: "Explore Mostafa Bahaa's projects — e-commerce with admin dashboard, Arabic ERP system, restaurant digital menu, wedding invitation, and React team projects. Built and deployed.",
   alternates: { canonical: "https://mostafa-s-portfolio.vercel.app/projects" },
 };
 

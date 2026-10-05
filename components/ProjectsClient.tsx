@@ -1,76 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { HiExternalLink } from "react-icons/hi";
-
-const projects = [
-  {
-    title: "Personal Application Tracker",
-    url: "https://hazem-elrayan.com/",
-    type: "Full Stack Web App",
-    emoji: "🌐",
-    color: "#6c63ff",
-    solo: true,
-    desc: "A professional full-stack personal website with an application tracking system. Users can submit applications and monitor their status in real-time.",
-    highlights: [
-      "Application submission & tracking portal",
-      "Self-hosted on a VPS — deployed end to end",
-      "PostgreSQL database for persistent data",
-      "Server-side rendering with Next.js",
-    ],
-    tech: ["Next.js", "Django", "PostgreSQL", "VPS", "Python"],
-    featured: true,
-  },
-  {
-    title: "Pet Society",
-    url: "https://pet-society-silk.vercel.app/",
-    type: "Social Platform",
-    emoji: "🐾",
-    color: "#ff6584",
-    solo: false,
-    team: "Team of 5",
-    desc: "A Facebook-inspired social network for pet owners. Create pet profiles, connect with other owners, arrange meetups — built as a full-stack team project.",
-    highlights: [
-      "Social feed, profiles, and messaging",
-      "Pet matching & meetup coordination",
-      "React-powered dynamic frontend",
-      "Full team collaboration — 5 developers",
-    ],
-    tech: ["React", "JavaScript", "REST API", "Team Project"],
-    featured: true,
-  },
-  {
-    title: "Movie App",
-    url: "https://movie-app-reactjs-beige.vercel.app/",
-    type: "API-Powered App",
-    emoji: "🎬",
-    color: "#f7b731",
-    solo: false,
-    team: "Team Project",
-    desc: "A movie and series discovery platform pulling live data from a public API. Browse ratings, trailers, user reviews, and trending content.",
-    highlights: [
-      "Live movie data via external API",
-      "Ratings, banners & user comments",
-      "Clean, responsive React UI",
-      "Collaborative team development",
-    ],
-    tech: ["React", "API Integration", "JavaScript", "CSS"],
-  },
-  {
-    title: "Tasbeeh App",
-    url: "https://tasbeeh-app-coral.vercel.app/",
-    type: "Islamic Utility App",
-    emoji: "📿",
-    color: "#43e97b",
-    solo: true,
-    desc: "A clean digital dhikr counter app for daily Islamic remembrances (Azkar). Minimal, functional, and meaningful.",
-    highlights: [
-      "Daily Azkar with counters",
-      "Minimal, distraction-free UI",
-      "Fast solo build with vibe coding",
-    ],
-    tech: ["React", "JavaScript", "CSS"],
-  },
-];
+import { projects } from "@/lib/projects";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -91,7 +22,7 @@ export default function ProjectsClient() {
             Projects I've <span className="accent-text">Built</span>
           </h1>
           <p style={{ fontSize: 16, color: "var(--text-muted)", maxWidth: 520, margin: "0 auto", lineHeight: 1.8 }}>
-            Real-world applications — from full-stack platforms deployed to production, to team collaborations and quick solo builds.
+            Real-world products for real clients — e-commerce, ERP, digital menus and invitations — plus team collaborations and personal builds. Each one includes what it does, what I built and the tech behind it.
           </p>
         </motion.div>
 
@@ -127,9 +58,14 @@ export default function ProjectsClient() {
                     </div>
                   </div>
 
-                  <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 18 }}>{project.desc}</p>
+                  <p style={{ fontSize: 14, color: "var(--text)", fontWeight: 600, lineHeight: 1.6, marginBottom: 10 }}>{project.tagline}</p>
+                  <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 14 }}>{project.desc}</p>
+                  <p style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.6, marginBottom: 18 }}>
+                    <strong style={{ color: project.color }}>My role: </strong>{project.role}
+                  </p>
 
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
+                    <span className="skill-pill" style={{ fontSize: 12, color: project.color, borderColor: project.color + "55" }}>{project.category}</span>
                     {project.solo ? (
                       <span className="skill-pill" style={{ fontSize: 12, color: "#43e97b", borderColor: "rgba(67,233,123,0.3)" }}>✨ Solo Project</span>
                     ) : (
@@ -140,7 +76,7 @@ export default function ProjectsClient() {
                     ))}
                   </div>
 
-                  <motion.a
+                  {project.url && (<motion.a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -149,7 +85,7 @@ export default function ProjectsClient() {
                     style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, padding: "10px 20px" }}
                   >
                     <HiExternalLink size={16} /> Live Demo
-                  </motion.a>
+                  </motion.a>)}
                 </div>
 
                 {/* Right – highlights */}
