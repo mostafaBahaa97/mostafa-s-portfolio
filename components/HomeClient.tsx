@@ -112,7 +112,7 @@ export default function HomeClient() {
               <div className="card glow-box" style={{ padding: "32px 28px", position: "relative", zIndex: 1 }}>
                 {/* Avatar */}
                 <div style={{
-                  width: 88, height: 88, borderRadius: "50%", margin: "0 auto 20px",
+                  width: 120, height: 120, borderRadius: "10%", margin: "0 auto 20px",
                   background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
                   display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: 36, fontFamily: "'Syne', sans-serif", fontWeight: 800, color: "white",
